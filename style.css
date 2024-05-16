@@ -1,0 +1,87 @@
+body {
+    height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.outline {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 150px 150px 150px;
+    justify-content: center;
+    align-content: center;
+}
+
+.outline div {
+    width: 150px;
+    height: auto;
+    background-color: white;
+}
+
+._1,
+._2,
+._3 {
+    border-bottom: #00000059 3px solid;
+}
+
+._4,
+._5,
+._6 {
+    border-bottom: #00000059 3px solid;
+}
+
+._1,
+._4,
+._7 {
+    border-right: #00000059 3px solid;
+}
+
+._2,
+._5,
+._8 {
+    border-right: #00000059 3px solid;
+}
+
+.x {
+    font-size: x-large;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: red;
+}
+
+.o {
+    font-size: x-large;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: blue;
+}
+
+p{
+    font-weight: 700;
+    font-size: xx-large;
+}
+
+.score{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.x-team{
+    color: red;
+}
+.o-team{
+    color: blue;
+}
