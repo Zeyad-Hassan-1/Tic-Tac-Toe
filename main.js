@@ -6,7 +6,7 @@ function player(character) {
     const increase_plays = () => plays++;
     const get_plays = () => plays;
     return {
-        character, get_score, increase_score, increase_plays, get_plays, plays
+        character, get_score, increase_score, increase_plays, get_plays, plays,score
     };
 }
 
@@ -14,6 +14,7 @@ const Xscore = document.querySelector('.x-score');
 const Oscore = document.querySelector('.o-score');
 const player1 = player('x');
 const player2 = player('o');
+let numberOfPlays = 0;
 
 let grid = [
     ['', '', ''],
@@ -112,24 +113,35 @@ divs.forEach((element, index) => {
                     // console.log(checkWinner(grid)[0], checkWinner(grid)[1],checkWinner(grid)[2]);
                     player1.increase_score()
                     Xscore.textContent = player1.get_score();
+                    // if(player1.get_score() == 3){
+                    //     player1.score = 0;
+                    //     // alert('X wins !!!!!!');
+                    // }
                 }
                 else {
                     // console.log(checkWinner(grid)[0], checkWinner(grid)[1]);
                     player2.increase_score()
                     Oscore.textContent = player2.get_score();
+                    // if(player2.get_score() == 3){
+                    //     alert('O wins !!!!!!');
+                    //     player2.score = 0;
+                    // }
                 }
 
                 resetGrid(); // إعادة تعيين المصفوفة
+                numberOfPlays = 0;
+                
             } else {
                 console.log('لا يوجد فائز حتى الآن.');
+                numberOfPlays++; 
+                if (numberOfPlays == 9) {
+                    resetGrid();
+                    numberOfPlays = 0;
+                    alert('It`s Draw')
+                }
             }
             // console.log(element.classList);
             // console.log(reset_grid);
-            if (player1.get_score() === 3 && player1.get_score() > player2.get_score()) {
-                alert('Player X win')
-            }
-            if (player2.get_score() === 3 && player2.get_score() > player1.get_score())
-                alert('Player O win')
         }
     })
 })

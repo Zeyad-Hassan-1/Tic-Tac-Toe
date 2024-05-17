@@ -1,5 +1,8 @@
 body {
     height: 100vh;
+    background-color: rgb(34, 36, 42);
+    padding: 40px 15px 15px 15px;
+    overflow: hidden;
 }
 
 * {
@@ -21,67 +24,94 @@ body {
 .outline div {
     width: 150px;
     height: auto;
-    background-color: white;
+    border: rgb(27, 30, 34) 7px solid;
 }
 
-._1,
-._2,
-._3 {
-    border-bottom: #00000059 3px solid;
+#_1,
+#_2,
+#_3 {
+    border-top: rgb(27, 30, 34) 14px solid;
 }
 
-._4,
-._5,
-._6 {
-    border-bottom: #00000059 3px solid;
+#_7,
+#_8,
+#_9 {
+    border-bottom: rgb(27, 30, 34) 14px solid;
 }
 
-._1,
-._4,
-._7 {
-    border-right: #00000059 3px solid;
+#_1,
+#_4,
+#_7 {
+    border-left: rgb(27, 30, 34) 14px solid;
 }
 
-._2,
-._5,
-._8 {
-    border-right: #00000059 3px solid;
+#_3,
+#_6,
+#_9 {
+    border-right: rgb(27, 30, 34) 14px solid;
 }
 
 .x {
-    font-size: x-large;
+    font-size: 100px;
     font-weight: 600;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: red;
+    color: rgb(255, 255, 255);
+    background-color: rgb(34, 36, 42);
 }
 
 .o {
-    font-size: x-large;
+    font-size: 100px;
     font-weight: 600;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: blue;
+    color: rgb(23, 115, 255);
+    background-color: rgb(34, 36, 42);
+    ;
 }
 
-p{
+p {
     font-weight: 700;
     font-size: xx-large;
 }
 
-.score{
-    width: 100%;
+.score {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 450px;
 }
 
-.x-team{
-    color: red;
+.x-team {
+    color: rgb(255, 255, 255);
+    text-align: center;
 }
-.o-team{
-    color: blue;
+
+.o-team {
+    color: rgb(23, 115, 255);
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    font-size: 42px;
+    text-align: center;
+}
+
+hr {
+    height: 5px;
+    background-color: rgb(255, 255, 255)
 }
